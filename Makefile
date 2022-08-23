@@ -258,6 +258,9 @@ export	HOSTARCH HOSTOS
 
 #########################################################################
 
+ARCH		?= arm
+CROSS_COMPILE	?= /mnt/disk/210/toolchain/gcc-linaro-6.3.1-2017.05-x86_64_arm-linux-gnueabihf/bin/arm-linux-gnueabihf-
+
 # set default to nothing for native builds
 ifeq ($(HOSTARCH),$(ARCH))
 CROSS_COMPILE ?=

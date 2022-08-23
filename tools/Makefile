@@ -49,10 +49,10 @@ HOSTCFLAGS_img2srec.o := -pedantic
 hostprogs-$(CONFIG_XWAY_SWAP_BYTES) += xway-swap-bytes
 HOSTCFLAGS_xway-swap-bytes.o := -pedantic
 
-hostprogs-y += mkenvimage
+#hostprogs-y += mkenvimage
 mkenvimage-objs := mkenvimage.o os_support.o lib/crc32.o
 
-hostprogs-y += dumpimage mkimage
+#hostprogs-y += dumpimage mkimage
 hostprogs-$(CONFIG_FIT_SIGNATURE) += fit_info fit_check_sign
 
 hostprogs-$(CONFIG_CMD_BOOTEFI_SELFTEST) += file2include
@@ -206,7 +206,7 @@ HOSTCFLAGS_ubsha1.o := -pedantic
 
 hostprogs-$(CONFIG_KIRKWOOD) += kwboot
 hostprogs-$(CONFIG_ARCH_MVEBU) += kwboot
-hostprogs-y += proftool
+#hostprogs-y += proftool
 hostprogs-$(CONFIG_STATIC_RELA) += relocate-rela
 hostprogs-$(CONFIG_RISCV) += prelink-riscv
 
@@ -214,7 +214,7 @@ hostprogs-y += fdtgrep
 fdtgrep-objs += $(LIBFDT_OBJS) fdtgrep.o
 
 ifneq ($(TOOLS_ONLY),y)
-hostprogs-y += spl_size_limit
+#hostprogs-y += spl_size_limit
 endif
 
 hostprogs-$(CONFIG_MIPS) += mips-relocs
